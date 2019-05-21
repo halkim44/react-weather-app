@@ -1,0 +1,20 @@
+.city-changer {
+    text-align: center;
+}
+
+.btn-container {
+    margin: 23px 0;
+}
+.btn {
+    color: #000;
+    background: #fff;
+    padding: 12px 30px;
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
+
+}
+#input-container.hidden {
+    visibility: hidden;
+}

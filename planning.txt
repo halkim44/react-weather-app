@@ -1,0 +1,35 @@
+## main goal ##
+
+web app that display weather information based on the user's current location and
+location provided by user.
+
+### FEATURES ###
+
+01. weather info based on user's current location
+02. weather info based on location provided by user
+03. app appearance change according to the current weather displayed
+
+
+### features in detail ###
+
+    01. weather info based on user's current location
+
+- loading screen before the data displayed
+- get location info from browser's geolocation
+    - if success display data
+    - alert the user that of his/her browser does not support geolocation
+        - display a blank weather info
+
+    02. weather info based on user provided location
+
+- prompt user for city name
+    - autocomplete city name
+    -display city's weather
+
+
+version 1
+- prompt user for city name when opening app
+- display user weather data based on the city name provided by user
+
+version 1.2
+- autocomplete city name suggestion

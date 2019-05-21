@@ -1,0 +1,60 @@
+.weather-display * {
+    text-align: center;
+    line-height: 60px;
+}
+.no-data {
+    display: none;
+}
+.weather-display > div {
+    height: 60px;
+}
+.weather-display .weather-icon {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather-icon > img {
+    display: block;
+    height: 70px;
+
+}
+.weather-display .weather-details {
+    height: 120px;
+}
+.weather-details {
+    display: flex;
+    flex-direction: row;
+}
+.weather-details .air-condition {
+    flex: 3.5;
+}
+.weather-details .temp-section {
+    flex: 1.5;
+}
+.main-temp {
+    display: block;
+    line-height: 100%;
+    height: 70%;
+    font-size: 5em;
+    letter-spacing: -11px;
+}
+.temp-max-min {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.temp-max-min span{
+    line-height: 100%;
+    padding: 0 12px;
+}
+.air-condition > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+.day,.date {
+    border-top: 2px solid #fff;
+}
