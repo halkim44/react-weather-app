@@ -6,16 +6,7 @@ import CityChanger from './city-changer';
 class App extends React.Component {
 
   state = {
-    weather: {
-      city: "Victoria,BN",
-description: "light intensity shower rain",
-icon: "http://openweathermap.org/img/w/10d.png",
-humidity: 79,
-temp: 29,
-tempMax: 30,
-tempMin: 29,
-wind: 1
-    }
+    weather: null
   }
 
   render() {
