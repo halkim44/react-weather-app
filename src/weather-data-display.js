@@ -29,7 +29,7 @@ class WeatherDataDisplay extends React.Component {
 				<div className="air-condition">
 					<div className="humidity">
 						<span>HUMIDITY</span>
-						<span>{data.humidity}</span>
+						<span>{data.humidity}%</span>
 					</div>
 					<div className="wind-speed">
 						<span>Wind</span>

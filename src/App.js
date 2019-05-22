@@ -2,17 +2,22 @@ import React from 'react';
 import './App.css';
 import WeatherDataDisplay from './weather-data-display';
 import CityChanger from './city-changer';
+import LoadingScreen from './loading-screen';
 
 class App extends React.Component {
 
   state = {
-    weather: null
+    weather: null,
+    loading: false
   }
 
   render() {
     let self = this;
     let display = <div></div>
     function getWeatherData(cityName) {
+      self.setState({
+        loading: true // activate preloader
+      }); 
 
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=b1940f452335ffa6df6c7adfa2cba3d1`,{
         mode: 'cors'
@@ -31,17 +36,28 @@ class App extends React.Component {
         newData.humidity = response.main.humidity;
         newData.wind = response.wind.speed;
         self.setState({
-          weather: newData
+          weather: newData,
+          loading: false
+        })
+      })
+      .catch(function(err){
+        alert('no weather information available for this country.');
+        self.setState({
+          weather: null,
+          loading: false
         })
       })
     }
-    if(this.state.weather){
+    if(this.state.loading){
+        display = <LoadingScreen />
+      } else if(this.state.weather) {
         display = <WeatherDataDisplay data={this.state.weather} />
-      } 
+      }
     return (
       <div className="main-container">
         { display }
         <CityChanger getNewWeather={getWeatherData}/>
+
       </div>
     );
   }

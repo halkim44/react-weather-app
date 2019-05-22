@@ -1,8 +1,5 @@
 .main-container {
     margin: 0 auto;
     width: 300px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    margin-top: 70px;
+    margin: 100px auto 0;
 }
